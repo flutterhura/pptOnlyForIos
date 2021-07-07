@@ -1,0 +1,42 @@
+group 'com.webview.flutter_filereader'
+version '1.0-SNAPSHOT'
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.3'
+    }
+}
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    buildTypes {
+        release {
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+        debug {
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+}
